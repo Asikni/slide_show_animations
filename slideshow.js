@@ -1,31 +1,28 @@
 let _marginLeft = -100;
-    const totalMargin = -500;
-    let animationFrame;
+const totalMargin = -500;
+setTimeout(function(){
+    document.getElementById('slideContainer').style.visibility = "visible";
+    },6000);
 
-    function moveContainer() {
+
+function moveleft() {
+    if (_marginLeft > totalMargin) {
         document.getElementById("slideContainer").style.marginLeft = _marginLeft + 'vw';
+        _marginLeft -= 100; 
+    }else {
+        document.getElementById("slideContainer").style.marginLeft = 0 + 'vw';
+        _marginLeft = -100;
     }
+}
 
-    function moveleft() {
-        if (_marginLeft > totalMargin) {
-            _marginLeft -= 2; // Adjust the increment for a slower animation
-            moveContainer();
-            animationFrame = requestAnimationFrame(moveleft);
-        } else {
-            _marginLeft = -100;
-            moveContainer();
-            cancelAnimationFrame(animationFrame);
-        }
+function moveRight(){
+    if (_marginLeft >= totalMargin && _marginLeft < -100) {
+        document.getElementById("slideContainer").style.marginLeft = 200 + _marginLeft + 'vw';
+        _marginLeft += 100; 
+        
+    }else if(_marginLeft >= -100){
+        document.getElementById("slideContainer").style.marginLeft = -400 + 'vw';
+        _marginLeft = -500;
     }
+}
 
-    function moveRight() {
-        if (_marginLeft >= totalMargin && _marginLeft < -100) {
-            _marginLeft += 2; // Adjust the increment for a slower animation
-            moveContainer();
-            animationFrame = requestAnimationFrame(moveRight);
-        } else if (_marginLeft >= -100) {
-            _marginLeft = -500;
-            moveContainer();
-            cancelAnimationFrame(animationFrame);
-        }
-    }

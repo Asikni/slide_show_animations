@@ -1,57 +1,61 @@
 .container {
-    width: 100vw;
-    height: 100vh;
-    overflow-x: hidden;
-    position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  position: relative;
 }
 
-.button{
-    position:absolute;
+.button {
+  position: absolute;
+  padding: 20px;
+  font-size: 20px;
 }
 
-.buttonleft{
-    top:50%;
-    left:10%;
+.buttonleft {
+  top: 50%;
+  left: 10%;
 }
 
-.buttonright{
-    top: 50%;
-    right:10%;
+.buttonright {
+  top: 50%;
+  right: 10%;
 }
 
 .slideContainer {
-    width: 500vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: row;
-    margin-left:0;
-   
+  width: 500vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  margin-left: 0;
+  animation: slideAnimation 8s ease-in-out;
+  transition: all 0.3s ease-in-out 0.3s;
 }
 
 .slide {
-    width: 100vw;
-    height: 100vh;
+  width: 100vw;
+  height: 100vh;
 }
 
-.ss1 { 
-    background-color: orange; 
-    /* flex:1; */
-    }
-.ss2 { 
-    background-color: orchid;
-    /* flex:2; */}
-.ss3 { 
-    background-color: mediumturquoise;
-    /* flex:3; */
-    }
-.ss4 { 
-    background-color: mediumpurple;
-    /* flex:3; */
+.ss1 {
+  background-color: orange;
+  /* flex:1; */
 }
-.ss5 { 
-    background-color: rgb(13, 58, 8);
-    /* flex:3; */
-     }
+.ss2 {
+  background-color: orchid;
+  /* flex:2; */
+}
+.ss3 {
+  background-color: mediumturquoise;
+  /* flex:3; */
+}
+.ss4 {
+  background-color: mediumpurple;
+  /* flex:3; */
+}
+.ss5 {
+  background-color: rgb(13, 58, 8);
+  /* flex:3; */
+}
 
 /* @keyframes slideAnimation {
     0% { transform: translateX(0); 
@@ -68,5 +72,3 @@
     }
    
 } */
-
-
